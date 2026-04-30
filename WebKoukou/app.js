@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_URL = 'http://localhost:3000/api';
+    const API_URL = 'https://koukou-apps.vercel.app';
 
     // Global State
     let state = {
@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // -- INJECTORES --
-    
+
     // Inyectar Banners
     function injectBanners() {
         if (!state.config) return;
         const c = state.config;
-        
+
         // Función auxiliar para inyectar si existe el elemento
         const inject = (containerId, bgImg, title, subtitle, btnText = null) => {
             const container = document.getElementById(containerId);
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const titleEl = container.querySelector('h1') || container.querySelector('h2');
                 const subEl = container.querySelector('p');
                 const btnEl = container.querySelector('a.btn-primary');
-                
+
                 if (titleEl && title) titleEl.innerHTML = title;
                 if (subEl && subtitle) subEl.innerHTML = subtitle;
                 if (btnEl && btnText) btnEl.innerHTML = btnText;
@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderCategoriesNav() {
         const catContainer = document.getElementById('dynamic-categories-nav');
         if (!catContainer) return;
-        
+
         catContainer.innerHTML = '';
         if (state.categories.length === 0) {
             catContainer.innerHTML = '<p class="text-center text-gray-400 w-full">No hay categorías configuradas.</p>';
             return;
         }
 
-        state.categories.filter(c => c.isActive).sort((a,b) => a.order - b.order).forEach((cat, idx) => {
+        state.categories.filter(c => c.isActive).sort((a, b) => a.order - b.order).forEach((cat, idx) => {
             const div = document.createElement('div');
             div.className = `category-item ${idx === 0 ? 'active' : ''}`;
             div.setAttribute('data-id', cat.id);
@@ -83,19 +83,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <span>${cat.name}</span>
             `;
-            
+
             div.addEventListener('click', () => {
                 document.querySelectorAll('.category-item').forEach(c => c.classList.remove('active'));
                 div.classList.add('active');
                 renderHomeProducts(cat.id);
             });
-            
+
             catContainer.appendChild(div);
         });
 
         // Cargar los productos de la primera categoría por defecto
-        const firstCat = state.categories.filter(c => c.isActive).sort((a,b) => a.order - b.order)[0];
-        if(firstCat) renderHomeProducts(firstCat.id);
+        const firstCat = state.categories.filter(c => c.isActive).sort((a, b) => a.order - b.order)[0];
+        if (firstCat) renderHomeProducts(firstCat.id);
     }
 
     // Renderizar Productos en Home (index.html)
@@ -104,9 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!prodContainer) return;
 
         prodContainer.classList.remove('fade-in');
-        
+
         const filtered = state.products.filter(p => p.categoryId === categoryId && p.isActive);
-        
+
         setTimeout(() => {
             prodContainer.innerHTML = '';
             if (filtered.length === 0) {
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        const activeCategories = state.categories.filter(c => c.isActive).sort((a,b) => a.order - b.order);
+        const activeCategories = state.categories.filter(c => c.isActive).sort((a, b) => a.order - b.order);
 
         activeCategories.forEach(cat => {
             const catProducts = state.products.filter(p => p.categoryId === cat.id && p.isActive);
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 const id = btn.getAttribute('data-id');
                 const icon = btn.querySelector('i');
-                if(!state.likes.includes(id)) {
+                if (!state.likes.includes(id)) {
                     icon.classList.replace('fa-regular', 'fa-solid');
                     icon.style.color = 'var(--accent-red)';
                     state.likes.push(id);
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.btn-product-wa').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.preventDefault();
-                if(!state.config) return;
+                if (!state.config) return;
                 const prodName = btn.getAttribute('data-name');
                 const num = state.config.whatsappNumber || '525512345678';
                 const baseMsg = state.config.whatsappMessageProduct || 'Me interesa: {{producto}}';
@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const user = document.getElementById('recom-name').value;
             const text = document.getElementById('recom-text').value;
-            
+
             try {
                 await fetch(`${API_URL}/comments`, {
                     method: 'POST',
