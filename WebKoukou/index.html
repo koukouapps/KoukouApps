@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KouKou Chocolates | Inicio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span>KouKou</span>
+            <span>CHOCOLATES</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">INICIO</a>
+            <a href="productos.html">PRODUCTOS</a>
+            <a href="promociones.html">PROMOCIONES</a>
+            <a href="recomendaciones.html">RECOMENDACIONES</a>
+            <a href="nosotros.html">NOSOTROS</a>
+        </nav>
+        <div class="header-icons">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button>
+                <i class="fa-regular fa-heart"></i>
+                <div class="badge" id="global-likes-badge">0</div>
+            </button>
+            <button>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div class="badge" id="global-cart-badge">0</div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero-home" class="hero">
+        <div class="hero-content">
+            <h1>Momentos <br><span>chidos,</span><br>sabor inolvidable.</h1>
+            <p>Bonbon es nuestro clásico<br>que conquista siempre.</p>
+            <a href="productos.html" class="btn-primary">
+                CONOCE BONBON <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat"><i class="fa-regular fa-heart"></i><span>236</span></div>
+            <div class="stat"><i class="fa-regular fa-comment"></i><span>18</span></div>
+            <div class="stat"><i class="fa-regular fa-star"></i><span>Guardar</span></div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2 class="section-title">Explora por categoría</h2>
+        <div class="categories-scroll" id="dynamic-categories-nav">
+            <!-- Renderizado dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Dynamic Category Products -->
+    <section class="category-products" style="padding: 0 5% 40px; background-color: var(--bg-color);">
+        <div class="products-grid" id="category-products-container">
+            <!-- Renderizado desde JS (app.js) -->
+        </div>
+    </section>
+
+    <!-- NUEVO LUGAR PARA PROMOCIONES (Abajo de Categorías) -->
+    <section class="promotions-box" style="padding: 40px 5%; background: var(--card-bg);">
+        <div class="section-header">
+            <h2 class="section-title" style="margin-bottom:0; font-size: 28px;">Promociones Exclusivas</h2>
+            <a href="promociones.html" class="view-all">Ver todas</a>
+        </div>
+        
+        <div class="dynamic-promos-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <!-- Promociones Inyectadas -->
+        </div>
+    </section>
+
+    <!-- Main Content Layout (Productos Destacados & Recomendaciones) -->
+    <div class="main-content" style="padding-top: 50px;">
+        <!-- Products Column -->
+        <section class="products-section">
+            <div class="section-header">
+                <h2 class="section-title" style="margin-bottom:0;">Productos destacados</h2>
+                <a href="productos.html" class="view-all">Ver catálogo completo</a>
+            </div>
+            <div class="products-grid" id="dynamic-home-products">
+                <!-- Destacados Dinámicos -->
+            </div>
+        </section>
+
+        <!-- Sidebar (Recommendations) -->
+        <div class="sidebar-grid" style="grid-template-columns: 1fr;">
+            <section class="recommendations-box">
+                <div class="section-header">
+                    <h2 class="section-title" style="margin-bottom:0; font-size: 22px;">Recomendaciones generales</h2>
+                    <a href="recomendaciones.html" class="view-all">Ver todas</a>
+                </div>
+                
+                <div class="input-group">
+                    <input type="text" placeholder="¿Qué te gustaría recomendarnos hoy?">
+                    <button class="btn-send"><i class="fa-solid fa-arrow-up"></i></button>
+                </div>
+
+                <div id="dynamic-comments-container">
+                    <!-- Comentarios Inyectados -->
+                </div>
+                <a href="recomendaciones.html" class="btn-outline" style="text-align: center; text-decoration: none;">Ver más recomendaciones</a>
+            </section>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/525512345678" target="_blank" class="floating-whatsapp" id="btn-whatsapp-global">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Pedir por WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo"><span>KouKou</span><span>CHOCOLATES</span></div>
+                <p class="footer-desc">Chocolates artesanales hechos con ingredientes de la más alta calidad.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Navegación</h4>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="promociones.html">Promociones</a>
+                    <a href="recomendaciones.html">Recomendaciones</a>
+                    <a href="nosotros.html">Nosotros</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Ayuda</h4>
+                <div class="footer-links">
+                    <a href="#">Preguntas frecuentes</a><a href="#">Envíos</a><a href="#">Métodos de pago</a><a href="#">Políticas</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Contáctanos</h4>
+                <div class="footer-links contact-links">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i> +52 55 1234 5678</a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i> hola@koukou.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 KouKou Chocolates. Todos los derechos reservados.</div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="active"><i class="fa-solid fa-house"></i>INICIO</a>
+        <a href="productos.html"><i class="fa-solid fa-box-open"></i>PRODUCTOS</a>
+        <a href="#"><i class="fa-regular fa-heart"></i>GUARDADOS</a>
+        <a href="recomendaciones.html"><i class="fa-regular fa-comment"></i>RECOMENDACIONES</a>
+    </nav>
+
+    <script src="app.js"></script>
+</body>
+</html>

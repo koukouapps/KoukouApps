@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KouKou | Nosotros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><span>KouKou</span><span>CHOCOLATES</span></div>
+        <nav class="nav-links">
+            <a href="index.html">INICIO</a>
+            <a href="productos.html">PRODUCTOS</a>
+            <a href="promociones.html">PROMOCIONES</a>
+            <a href="recomendaciones.html">RECOMENDACIONES</a>
+            <a href="nosotros.html" class="active">NOSOTROS</a>
+        </nav>
+        <div class="header-icons">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button><i class="fa-regular fa-heart"></i><div class="badge" id="global-likes-badge">0</div></button>
+            <button><i class="fa-solid fa-bag-shopping"></i><div class="badge" id="global-cart-badge">0</div></button>
+        </div>
+    </header>
+
+    <section id="hero-nosotros" class="hero" style="height: 400px; background: linear-gradient(to right, rgba(28, 18, 12, 0.9) 0%, rgba(28, 18, 12, 0.4) 100%), url('https://images.unsplash.com/photo-1512223792601-592a98090059?q=80&w=2000&auto=format&fit=crop') center/cover;">
+        <div class="hero-content">
+            <h1 style="font-size: 48px;">Nuestra <br><span>Historia</span></h1>
+            <p>Pasión por el cacao, dedicación artesanal.</p>
+        </div>
+    </section>
+
+    <section style="padding: 60px 5%; background: var(--bg-color); min-height: 50vh; display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px;">
+            <img id="about-side-img" src="https://images.unsplash.com/photo-1604085449231-15b9a7bd6e4a?q=80&w=800" alt="Nosotros" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+            <div id="about-history-content">
+                <h2 class="section-title">El arte del chocolate</h2>
+                <p style="margin-bottom: 20px; color: var(--text-gray); font-size: 16px; line-height: 1.6;">En KouKou, creemos que cada pieza de chocolate debe contar una historia.</p>
+            </div>
+            <div id="about-mission-content" style="margin-top: 20px; color: var(--text-gray); font-size: 16px; line-height: 1.6;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/525512345678" target="_blank" class="floating-whatsapp" id="btn-whatsapp-global"><i class="fa-brands fa-whatsapp"></i><span>Contactar Directo</span></a>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo"><span>KouKou</span><span>CHOCOLATES</span></div>
+                <p class="footer-desc">Chocolates artesanales hechos con ingredientes de la más alta calidad.</p>
+                <div class="social-links"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+            </div>
+            <div>
+                <h4 class="footer-title">Navegación</h4>
+                <div class="footer-links"><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="promociones.html">Promociones</a><a href="recomendaciones.html">Recomendaciones</a><a href="nosotros.html">Nosotros</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 KouKou Chocolates. Todos los derechos reservados.</div>
+    </footer>
+    <nav class="bottom-nav">
+        <a href="index.html"><i class="fa-solid fa-house"></i>INICIO</a><a href="productos.html"><i class="fa-solid fa-box-open"></i>PRODUCTOS</a><a href="#"><i class="fa-regular fa-heart"></i>GUARDADOS</a><a href="recomendaciones.html"><i class="fa-regular fa-comment"></i>RECOMENDACIONES</a>
+    </nav>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KouKou | Promociones</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><span>KouKou</span><span>CHOCOLATES</span></div>
+        <nav class="nav-links">
+            <a href="index.html">INICIO</a>
+            <a href="productos.html">PRODUCTOS</a>
+            <a href="promociones.html" class="active">PROMOCIONES</a>
+            <a href="recomendaciones.html">RECOMENDACIONES</a>
+            <a href="nosotros.html">NOSOTROS</a>
+        </nav>
+        <div class="header-icons">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button><i class="fa-regular fa-heart"></i><div class="badge" id="global-likes-badge">0</div></button>
+            <button><i class="fa-solid fa-bag-shopping"></i><div class="badge" id="global-cart-badge">0</div></button>
+        </div>
+    </header>
+
+    <section id="hero-promos" class="hero" style="height: 300px; background: linear-gradient(to right, rgba(28, 18, 12, 0.9) 0%, rgba(28, 18, 12, 0.4) 100%), url('https://images.unsplash.com/photo-1548858348-111db05a5a1f?q=80&w=2000&auto=format&fit=crop') center/cover;">
+        <div class="hero-content">
+            <h1 style="font-size: 48px;">Ofertas <br><span>Irresistibles</span></h1>
+        </div>
+    </section>
+
+    <section class="promotions-box" style="padding: 50px 5%; background: var(--bg-color); min-height: 50vh;">
+        <div class="dynamic-promos-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 40px;">
+            <!-- Renderizado vía app.js -->
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/525512345678" target="_blank" class="floating-whatsapp" id="btn-whatsapp-global"><i class="fa-brands fa-whatsapp"></i><span>Pedir por WhatsApp</span></a>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo"><span>KouKou</span><span>CHOCOLATES</span></div>
+                <p class="footer-desc">Chocolates artesanales hechos con ingredientes de la más alta calidad.</p>
+                <div class="social-links"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
+            </div>
+            <div>
+                <h4 class="footer-title">Navegación</h4>
+                <div class="footer-links"><a href="index.html">Inicio</a><a href="productos.html">Productos</a><a href="promociones.html">Promociones</a><a href="recomendaciones.html">Recomendaciones</a><a href="nosotros.html">Nosotros</a></div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 KouKou Chocolates. Todos los derechos reservados.</div>
+    </footer>
+    <nav class="bottom-nav">
+        <a href="index.html"><i class="fa-solid fa-house"></i>INICIO</a><a href="productos.html"><i class="fa-solid fa-box-open"></i>PRODUCTOS</a><a href="#"><i class="fa-regular fa-heart"></i>GUARDADOS</a><a href="recomendaciones.html"><i class="fa-regular fa-comment"></i>RECOMENDACIONES</a>
+    </nav>
+    <script src="app.js"></script>
+</body>
+</html>

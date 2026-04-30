@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KouKou | Todos los Productos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span>KouKou</span>
+            <span>CHOCOLATES</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">INICIO</a>
+            <a href="productos.html" class="active">PRODUCTOS</a>
+            <a href="promociones.html">PROMOCIONES</a>
+            <a href="recomendaciones.html">RECOMENDACIONES</a>
+            <a href="nosotros.html">NOSOTROS</a>
+        </nav>
+        <div class="header-icons">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button>
+                <i class="fa-regular fa-heart"></i>
+                <div class="badge" id="global-likes-badge">0</div>
+            </button>
+            <button>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <div class="badge" id="global-cart-badge">0</div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section (Mini) -->
+    <section id="hero-productos" class="hero" style="height: 350px; background: linear-gradient(to right, rgba(28, 18, 12, 0.9) 0%, rgba(28, 18, 12, 0.4) 100%), url('https://images.unsplash.com/photo-1606312619070-d48b4c652a52?q=80&w=2000&auto=format&fit=crop') center/cover;">
+        <div class="hero-content">
+            <h1 style="font-size: 48px;">Nuestro <br><span>Catálogo</span></h1>
+            <p>Descubre todas nuestras creaciones.</p>
+        </div>
+    </section>
+
+    <!-- Products Content -->
+    <section class="products-section" style="padding: 50px 5%; background-color: var(--bg-color);">
+        <div class="section-header">
+            <h2 class="section-title" style="margin-bottom:0;">Catálogo Completo</h2>
+            <div class="filters">
+                <select id="category-filter" style="padding: 10px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--card-bg); font-family: var(--font-body); font-size: 14px; min-width: 150px; cursor: pointer;">
+                    <option value="all">Todas las Categorías</option>
+                    <option value="Bonbon">Bonbon</option>
+                    <option value="Douce">Douce</option>
+                    <option value="Galletas">Galletas</option>
+                    <option value="Postres">Postres</option>
+                    <option value="Barras">Barras</option>
+                    <option value="Especiales">Especiales</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="full-catalog-container">
+            <!-- Renderizado vía app.js -->
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/525512345678" target="_blank" class="floating-whatsapp" id="btn-whatsapp-global">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Pedir por WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo"><span>KouKou</span><span>CHOCOLATES</span></div>
+                <p class="footer-desc">Chocolates artesanales hechos con ingredientes de la más alta calidad.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Navegación</h4>
+                <div class="footer-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="promociones.html">Promociones</a>
+                    <a href="recomendaciones.html">Recomendaciones</a>
+                    <a href="nosotros.html">Nosotros</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Ayuda</h4>
+                <div class="footer-links">
+                    <a href="#">Preguntas frecuentes</a><a href="#">Envíos</a><a href="#">Métodos de pago</a><a href="#">Políticas</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Contáctanos</h4>
+                <div class="footer-links contact-links">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i> +52 55 1234 5678</a>
+                    <a href="#"><i class="fa-regular fa-envelope"></i> hola@koukou.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2024 KouKou Chocolates. Todos los derechos reservados.</div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html"><i class="fa-solid fa-house"></i>INICIO</a>
+        <a href="productos.html" class="active"><i class="fa-solid fa-box-open"></i>PRODUCTOS</a>
+        <a href="#"><i class="fa-regular fa-heart"></i>GUARDADOS</a>
+        <a href="recomendaciones.html"><i class="fa-regular fa-comment"></i>RECOMENDACIONES</a>
+    </nav>
+
+    <script src="app.js"></script>
+    <!-- JS Eliminado, se maneja por app.js maestro -->
+</body>
+</html>
